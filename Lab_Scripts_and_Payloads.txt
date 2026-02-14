@@ -1,4 +1,4 @@
-SCRIPTS AND PAYLOADS USED IN THE LAB Web Application Security Lab
+SCRIPTS USED IN THE LAB Web Application Security Lab
 
 Author: Mechac Ndikuna
 
@@ -19,22 +19,6 @@ Payload:
 Explanation: Injects JavaScript into the web page. The alert() function
 demonstrates successful script execution.
 
-  ----------------------------
-  3. COOKIE STEALING PAYLOAD
-  ----------------------------
-
-Payload:
-Explanation: Displays session cookies stored in the browser. If
-exploited maliciously, this could allow session hijacking.
-
-  --------------------------------
-  4. VISUAL MANIPULATION PAYLOAD
-  --------------------------------
-
-Payload:
-Explanation: Modifies the web page appearance. Demonstrates the ability
-to alter page content dynamically.
-
   --------------------
   5. SECURITY LESSON
   --------------------
@@ -46,4 +30,3 @@ Best Practices: - Use prepared statements - Implement Content Security
 Policy (CSP) - Sanitize all user inputs - Apply least privilege
 principle
 
-End of Document
