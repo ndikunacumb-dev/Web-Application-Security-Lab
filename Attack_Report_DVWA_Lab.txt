@@ -1,0 +1,93 @@
+ATTACK REPORT Web Application Penetration Testing Lab (DVWA)
+
+Author: Mechac Ndikuna Environment: Isolated Virtual Lab (VMware +
+VirtualBox) Attacker Machine: Kali Linux Target: DVWA (Damn Vulnerable
+Web Application) Date: 2026
+
+DISCLAIMER: This laboratory was conducted in a controlled environment
+for educational purposes only.
+
+  ----------------------
+  1. EXECUTIVE SUMMARY
+  ----------------------
+
+This report documents the security assessment performed against a
+vulnerable web application (DVWA). The objective was to identify and
+exploit common web vulnerabilities in a controlled lab environment.
+
+The following attacks were successfully executed:
+
+-   SQL Injection
+-   Cross-Site Scripting (XSS)
+
+  --------------------
+  2. LAB ENVIRONMENT
+  --------------------
+
+Infrastructure: - Domain Controller (Windows Server) - Client Machines
+(Windows 10) - Kali Linux (Attacker) - DVWA hosted on local web server
+
+Security Level configured to: LOW
+
+  -----------------------------
+  3. ATTACK 1 – SQL INJECTION
+  -----------------------------
+
+Vulnerability Type: SQL Injection
+
+Payload Used: 1’ OR ‘1’=’1
+
+Description: The application failed to properly sanitize user input. The
+injected SQL logic altered the backend query logic and bypassed
+authentication mechanisms.
+
+Impact: - Unauthorized data retrieval - Authentication bypass -
+Potential full database compromise
+
+Risk Level: HIGH
+
+Mitigation: - Use prepared statements - Input validation - Parameterized
+queries - Web Application Firewall (WAF)
+
+  ------------------------------------------
+  4. ATTACK 2 – CROSS-SITE SCRIPTING (XSS)
+  ------------------------------------------
+
+Vulnerability Type: Reflected XSS
+
+Payload Used:
+Advanced Payload:
+Description: The application reflected unsanitized user input directly
+into the browser response. This allowed execution of arbitrary
+JavaScript in the victim’s browser.
+
+Impact: - Session hijacking - Cookie theft - Phishing attacks - Content
+manipulation
+
+Risk Level: HIGH
+
+Mitigation: - Output encoding - Content Security Policy (CSP) - Input
+filtering - Secure cookie flags (HttpOnly, Secure)
+
+  ----------------------------
+  5. OVERALL RISK ASSESSMENT
+  ----------------------------
+
+The web application demonstrates critical security weaknesses. If
+deployed in production, it would be vulnerable to:
+
+-   Data breaches
+-   Account takeover
+-   Privilege escalation
+
+Immediate remediation is required.
+
+  ---------------
+  6. CONCLUSION
+  ---------------
+
+This lab demonstrates the importance of secure coding practices.
+Developers must validate, sanitize, and properly handle user input.
+Security testing should be integrated into the development lifecycle.
+
+End of Report
