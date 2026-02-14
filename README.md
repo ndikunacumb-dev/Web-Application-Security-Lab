@@ -1,4 +1,4 @@
-# Web Application Security Lab (OWASP)
+# Web Application Security Lab
 
 ## Objective
 Deploy and exploit vulnerable web applications to understand common web vulnerabilities.
