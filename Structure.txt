@@ -1,0 +1,18 @@
+WebApp-Security-Lab
+│
+├── README.md
+├── attack_report.md
+├── architecture.txt
+│
+├── screenshots
+│   ├── 01_vm_creation.png
+│   ├── 02_apache_running.png
+│   ├── 05_sql_injection.png
+│   ├── 06_xss.png
+│   └── ...
+│
+└── scripts
+    ├── nikto_scan.txt
+    ├── sql_payloads.txt
+    ├── xss_payloads.txt
+    └── shell.php
